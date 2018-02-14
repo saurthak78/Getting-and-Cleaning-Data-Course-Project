@@ -24,11 +24,20 @@ filenames <- C("X_test", "y_test", "subject_test",
                "X_train", "y_train", "subject_train")
 
 
-read_files <- function(file_name) {
-        read.table("./data/UCI HAR Dataset/test/",paste(file_name,".txt"))
-}
+l <- lapply(
+        paste("./",
+              (substr(filenames,3,(nchar(filenames)))),
+              "/",
+              filenames,
+              ".txt",
+              sep = ""), 
+            read.table)
 
-filenames <- lapply(filenames, read_files)
+#read_files <- function(file_name) {
+#        read.table("./data/UCI HAR Dataset/test/",paste(file_name,".txt"))
+#}
+#
+#filenames <- lapply(filenames, read_files)
 
 
 setwd("./data/UCI HAR Dataset/test")
