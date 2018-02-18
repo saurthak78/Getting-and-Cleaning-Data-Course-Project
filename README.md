@@ -1,5 +1,6 @@
 # Getting-and-Cleaning-Data-Course-Project
 Saurabh Thakur
+
 The purpose of this project is to demonstrate the process of collecting, working with, and cleaning a data set for analysis.
 
 This project should contain:
