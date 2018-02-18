@@ -23,6 +23,10 @@ if(!file.exists("./data")) {
 filenames <- C("X_test", "y_test", "subject_test",
                "X_train", "y_train", "subject_train")
 
+l2 <- sapply(paste("./",(matrix(unlist(strsplit(filenames, split = "_")),
+                      ncol = 2,byrow = TRUE)[,2]),"/",filenames,".txt",
+              sep = ""),read.table)
+
 
 l <- lapply(
         paste("./",
